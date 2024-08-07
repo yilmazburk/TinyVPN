@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		98B0F3582C640C2D002969D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0F3572C640C2D002969D0 /* AppDelegate.swift */; };
+		98B0F35A2C640C2D002969D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0F3592C640C2D002969D0 /* SceneDelegate.swift */; };
+		98B0F35C2C640C2D002969D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0F35B2C640C2D002969D0 /* ViewController.swift */; };
+		98B0F3612C640C2E002969D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98B0F3602C640C2E002969D0 /* Assets.xcassets */; };
+		98B0F3642C640C2E002969D0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 98B0F3632C640C2E002969D0 /* Base */; };
+		98B0F3712C640F76002969D0 /* VPN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0F3702C640F76002969D0 /* VPN.swift */; };
+		98B0F3742C64102A002969D0 /* VPNConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0F3732C64102A002969D0 /* VPNConnectionManager.swift */; };
+		98B0F37A2C641298002969D0 /* Magics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0F3792C641298002969D0 /* Magics.swift */; };
+		98B0F37D2C6413EF002969D0 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = 98B0F37C2C6413EF002969D0 /* Factory */; };
+		98B0F3802C641423002969D0 /* Container+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B0F37F2C641423002969D0 /* Container+Extension.swift */; };
+		98B0F3872C641C05002969D0 /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 98B0F3862C641C05002969D0 /* SwiftKeychainWrapper */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		98B0F3542C640C2D002969D0 /* TinyVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinyVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		98B0F3572C640C2D002969D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		98B0F3592C640C2D002969D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		98B0F35B2C640C2D002969D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		98B0F3602C640C2E002969D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		98B0F3632C640C2E002969D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		98B0F3652C640C2E002969D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98B0F3702C640F76002969D0 /* VPN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPN.swift; sourceTree = "<group>"; };
+		98B0F3732C64102A002969D0 /* VPNConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNConnectionManager.swift; sourceTree = "<group>"; };
+		98B0F3752C641136002969D0 /* TinyVPN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TinyVPN.entitlements; sourceTree = "<group>"; };
+		98B0F3792C641298002969D0 /* Magics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magics.swift; sourceTree = "<group>"; };
+		98B0F37F2C641423002969D0 /* Container+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Extension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		98B0F3512C640C2D002969D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98B0F3872C641C05002969D0 /* SwiftKeychainWrapper in Frameworks */,
+				98B0F37D2C6413EF002969D0 /* Factory in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		98B0F34B2C640C2D002969D0 = {
+			isa = PBXGroup;
+			children = (
+				98B0F3562C640C2D002969D0 /* TinyVPN */,
+				98B0F3552C640C2D002969D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		98B0F3552C640C2D002969D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98B0F3542C640C2D002969D0 /* TinyVPN.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		98B0F3562C640C2D002969D0 /* TinyVPN */ = {
+			isa = PBXGroup;
+			children = (
+				98B0F3752C641136002969D0 /* TinyVPN.entitlements */,
+				98B0F37E2C641411002969D0 /* Extensions */,
+				98B0F3722C64101D002969D0 /* Managers */,
+				98B0F36F2C640F6B002969D0 /* Models */,
+				98B0F36E2C640C99002969D0 /* Delegates */,
+				98B0F36D2C640C90002969D0 /* ViewControllers */,
+				98B0F36C2C640C86002969D0 /* SupportingFiles */,
+				98B0F3652C640C2E002969D0 /* Info.plist */,
+			);
+			path = TinyVPN;
+			sourceTree = "<group>";
+		};
+		98B0F36C2C640C86002969D0 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				98B0F3602C640C2E002969D0 /* Assets.xcassets */,
+				98B0F3622C640C2E002969D0 /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		98B0F36D2C640C90002969D0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				98B0F35B2C640C2D002969D0 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		98B0F36E2C640C99002969D0 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				98B0F3572C640C2D002969D0 /* AppDelegate.swift */,
+				98B0F3592C640C2D002969D0 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		98B0F36F2C640F6B002969D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				98B0F3702C640F76002969D0 /* VPN.swift */,
+				98B0F3792C641298002969D0 /* Magics.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		98B0F3722C64101D002969D0 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				98B0F3732C64102A002969D0 /* VPNConnectionManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		98B0F37E2C641411002969D0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				98B0F37F2C641423002969D0 /* Container+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		98B0F3532C640C2D002969D0 /* TinyVPN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98B0F3682C640C2E002969D0 /* Build configuration list for PBXNativeTarget "TinyVPN" */;
+			buildPhases = (
+				98B0F3502C640C2D002969D0 /* Sources */,
+				98B0F3512C640C2D002969D0 /* Frameworks */,
+				98B0F3522C640C2D002969D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TinyVPN;
+			packageProductDependencies = (
+				98B0F37C2C6413EF002969D0 /* Factory */,
+				98B0F3862C641C05002969D0 /* SwiftKeychainWrapper */,
+			);
+			productName = TinyVPN;
+			productReference = 98B0F3542C640C2D002969D0 /* TinyVPN.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		98B0F34C2C640C2D002969D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					98B0F3532C640C2D002969D0 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 98B0F34F2C640C2D002969D0 /* Build configuration list for PBXProject "TinyVPN" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 98B0F34B2C640C2D002969D0;
+			packageReferences = (
+				98B0F36B2C640C7F002969D0 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+				98B0F37B2C6413EF002969D0 /* XCRemoteSwiftPackageReference "Factory" */,
+				98B0F3852C641C05002969D0 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+			);
+			productRefGroup = 98B0F3552C640C2D002969D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				98B0F3532C640C2D002969D0 /* TinyVPN */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		98B0F3522C640C2D002969D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98B0F3612C640C2E002969D0 /* Assets.xcassets in Resources */,
+				98B0F3642C640C2E002969D0 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		98B0F3502C640C2D002969D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98B0F3712C640F76002969D0 /* VPN.swift in Sources */,
+				98B0F35C2C640C2D002969D0 /* ViewController.swift in Sources */,
+				98B0F3742C64102A002969D0 /* VPNConnectionManager.swift in Sources */,
+				98B0F37A2C641298002969D0 /* Magics.swift in Sources */,
+				98B0F3582C640C2D002969D0 /* AppDelegate.swift in Sources */,
+				98B0F35A2C640C2D002969D0 /* SceneDelegate.swift in Sources */,
+				98B0F3802C641423002969D0 /* Container+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		98B0F3622C640C2E002969D0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				98B0F3632C640C2E002969D0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		98B0F3662C640C2E002969D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		98B0F3672C640C2E002969D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		98B0F3692C640C2E002969D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TinyVPN/TinyVPN.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TinyVPN/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiny.vpn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		98B0F36A2C640C2E002969D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TinyVPN/TinyVPN.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TinyVPN/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiny.vpn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		98B0F34F2C640C2D002969D0 /* Build configuration list for PBXProject "TinyVPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98B0F3662C640C2E002969D0 /* Debug */,
+				98B0F3672C640C2E002969D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98B0F3682C640C2E002969D0 /* Build configuration list for PBXNativeTarget "TinyVPN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98B0F3692C640C2E002969D0 /* Debug */,
+				98B0F36A2C640C2E002969D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		98B0F36B2C640C7F002969D0 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.56.1;
+			};
+		};
+		98B0F37B2C6413EF002969D0 /* XCRemoteSwiftPackageReference "Factory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Factory";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.2;
+			};
+		};
+		98B0F3852C641C05002969D0 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jrendel/SwiftKeychainWrapper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		98B0F37C2C6413EF002969D0 /* Factory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98B0F37B2C6413EF002969D0 /* XCRemoteSwiftPackageReference "Factory" */;
+			productName = Factory;
+		};
+		98B0F3862C641C05002969D0 /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 98B0F3852C641C05002969D0 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 98B0F34C2C640C2D002969D0 /* Project object */;
+}
