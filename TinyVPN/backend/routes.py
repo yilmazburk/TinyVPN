@@ -5,11 +5,43 @@ from flask_login import login_required, current_user, login_user
 from werkzeug.security import check_password_hash
 import jwt
 import datetime
+from functools import wraps
+# from utils.utils import token_required
 
 api_bp = Blueprint('api', __name__)
 openvpn_manager = OpenVPNManager()
 
 SECRET_KEY = '1234'
+
+def verify_token(token):
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=['HS256'])
+        return payload.get('user_id')  # Bu artık bir string olacak
+    except jwt.ExpiredSignatureError:
+        return None
+    except jwt.InvalidTokenError:
+        return None
+
+
+def token_required(f):
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        auth_header = request.headers.get('Authorization')
+        if auth_header and auth_header.startswith('Bearer '):
+            token = auth_header.split(' ')[1]
+            user_id = verify_token(token)
+            if user_id:
+                current_user = User.find_by_id(user_id)
+                if current_user:
+                    return f(current_user, *args, **kwargs)
+                else:
+                    return jsonify({'message': 'User not found!'}), 404
+            else:
+                return jsonify({'message': 'Token is invalid!'}), 401
+        else:
+            return jsonify({'message': 'Token is missing!'}), 401
+    return wrapper
+
 
 @api_bp.route('/register', methods=['POST'])
 def register():
@@ -36,7 +68,7 @@ def login():
         login_user(user)
 
         token = jwt.encode({
-            'user_id': user.id,
+            'user_id': str(user.id),  # UUID'yi string'e çevirin
             'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
         }, SECRET_KEY, algorithm='HS256')
         return jsonify({'message': 'Login successful', 'token': token})
@@ -51,13 +83,32 @@ def logout():
 
 
 @api_bp.route('/users', methods=['GET'])
-@login_required
 def get_users():
-    users = User.find_all()
-    return jsonify([user.username for user in users])
+    auth_header = request.headers.get('Authorization')
+    if auth_header and auth_header.startswith('Bearer '):
+        token = auth_header.split(' ')[1]
+        user_id = verify_token(token)
+        # print(f"User ID from token: {user_id}")  # Debug log
+        if user_id:
+            current_user = User.find_by_id(user_id)
+            # print(f"Current user: {current_user}")  # Debug log
+            if current_user:
+                users = User.find_all()
+                return jsonify([user.username for user in users])
+            else:
+                # print(f"User not found for ID: {user_id}")  # Debug log
+                return jsonify({'message': 'User not found!'}), 404
+        else:
+            # print("Invalid token")  # Debug log
+            return jsonify({'message': 'Token is invalid!'}), 401
+    else:
+        # print("Token is missing")  # Debug log
+        return jsonify({'message': 'Token is missing!'}), 401
+
+
 
 @api_bp.route('/vpn/connect', methods=['POST'])
-@login_required
+@token_required
 def connect_vpn():
     server_config = openvpn_manager.get_config()
     # Connect user to VPN using OpenVPN API
